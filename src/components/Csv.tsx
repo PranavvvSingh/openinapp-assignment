@@ -26,7 +26,7 @@ const Csv = ({ headers, parsedData, setParsedData }: PropsType) => {
       <div className="p-2">
          <h1 className="text-xl font-bold mb-5">Uploads</h1>
          <div className="w-full bg-[#F5F5F5] rounded-md p-4">
-            <table className="w- text-left border-separate  border-spacing-y-3">
+            <table className="w-full text-left border-separate  border-spacing-y-3">
                <thead>
                   <tr>
                      {headers.map((header) => (

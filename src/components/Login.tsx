@@ -1,4 +1,3 @@
-import { useState } from "react"
 import google from "../assets/google.png"
 import apple from "../assets/apple.png"
 import { FaGithub } from "react-icons/fa"
@@ -8,8 +7,6 @@ import { IoLogoDiscord } from "react-icons/io5"
 import { NavLink } from "react-router-dom"
 
 const Login = () => {
-   const [email, setEmail] = useState("")
-   const [password, setPassword] = useState("")
   return (
      <div className="flex flex-row h-screen">
         <div className="w-1/2 overflow-hidden relative">

@@ -25,12 +25,12 @@ const Csv = ({ headers, parsedData, setParsedData }: PropsType) => {
    return (
       <div className="p-2">
          <h1 className="text-xl font-bold mb-5">Uploads</h1>
-         <div className="w-full bg-neutral-200 rounded-md p-4">
-            <table className="table-auto w-full text-left border-separate  border-spacing-y-3">
+         <div className="w-full bg-[#F5F5F5] rounded-md p-4">
+            <table className="w- text-left border-separate  border-spacing-y-3">
                <thead>
                   <tr>
                      {headers.map((header) => (
-                        <th key={header} className="p-3 capitalize">
+                        <th key={header} className="p-3 capitalize w-[77px]">
                            {header}
                         </th>
                      ))}
@@ -39,10 +39,10 @@ const Csv = ({ headers, parsedData, setParsedData }: PropsType) => {
                <tbody className="overflow-auto">
                   {parsedData.map((row) => (
                      <tr key={row.id}>
-                        <td className="p-3 rounded-s-md bg-neutral-50">
+                        <td className="p-3 md:rounded-s-md bg-transparent md:bg-neutral-50">
                            {row.id.length === 1 ? "0" + row.id : row.id}
                         </td>
-                        <td className="p-3 bg-neutral-50">
+                        <td className="p-3 rounded-s-md md:rounded-none bg-neutral-50">
                            <a
                               href={`http://${row.links}`}
                               className="underline text-indigo-500"
@@ -65,7 +65,7 @@ const Csv = ({ headers, parsedData, setParsedData }: PropsType) => {
                               ))}
                            </select>
                         </td>
-                        <td className="p-1 rounded-e-md bg-neutral-50">
+                        <td className="flex flex-nowrap p-3 gap-2 rounded-e-md bg-neutral-50">
                            {row["selected tags"].map((tag) => (
                               <Tag
                                  key={crypto.randomUUID()}

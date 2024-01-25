@@ -11,7 +11,7 @@ const Tag = ({
    id: string
 }) => {
    return (
-      <button className="inline-flex gap-x-1 items-center bg-indigo-500 p-1 m-1 rounded-md text-white">
+      <button className="inline-flex gap-x-1 items-center bg-indigo-500 p-1 rounded-md text-white">
          {tag}
          <Cross onClick={()=>setParsedData(current=>{
             return current.map(row=>{

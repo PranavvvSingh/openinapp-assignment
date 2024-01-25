@@ -11,7 +11,8 @@ import { FaRegBell } from "react-icons/fa"
 import person from "../assets/person.png"
 import { FiMenu } from "react-icons/fi"
 import { RxCross2 } from "react-icons/rx"
-import Main from "./Upload"
+// import Upload from "./Upload"
+import { Outlet } from "react-router-dom"
 
 const links = [
    { label: "Dashboard", icon: <RxDashboard /> },
@@ -57,7 +58,8 @@ const Dashboard = () => {
                </div>
             </div>
 
-            <Main />
+            {/* <Upload /> */}
+            <Outlet/>
 
             <div className="sticky md:hidden top-0 left-0 h-[60px] flex justify-between items-center p-3 w-full bg-neutral-50">
                <div className="flex justify-center items-center gap-1">
